@@ -40,7 +40,6 @@ def main():
 
 
 def _cmd_list(args):
-    from flashdownup.registry import list_downsamplers, list_upsamplers
 
     if args.type in ("down", "all"):
         print("Downsamplers:")

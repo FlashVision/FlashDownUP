@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=70.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flashdownup"
+version = "1.0.0"
+description = "FlashDownUP: Lossless and lossy image downsampling/upsampling operators (S2D, D2S, DWT-Haar, bilinear, bicubic, and more)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "FlashVision"},
+]
+keywords = ["downsampling", "upsampling", "space-to-depth", "depth-to-space", "dwt", "haar-wavelet", "pixel-shuffle", "super-resolution", "image-processing", "pytorch"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "numpy>=1.24.0",
+    "Pillow>=9.0.0",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+analytics = ["matplotlib>=3.7.0", "pandas>=2.0.0"]
+export = ["onnx>=1.14.0", "onnxruntime>=1.15.0"]
+dev = ["pytest", "ruff", "pre-commit"]
+all = ["matplotlib>=3.7.0", "pandas>=2.0.0", "onnx>=1.14.0", "onnxruntime>=1.15.0"]
+
+[project.urls]
+Homepage = "https://github.com/FlashVision/FlashDownUP"
+Repository = "https://github.com/FlashVision/FlashDownUP"
+Issues = "https://github.com/FlashVision/FlashDownUP/issues"
+
+[project.scripts]
+flashdownup = "flashdownup.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["flashdownup*"]
+
+[tool.ruff]
+line-length = 120

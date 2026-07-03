@@ -2,9 +2,9 @@
 
 ## Maintainer
 
-- **[Gaurav14cs17](https://github.com/Gaurav14cs17)** — Creator & Lead Developer
+- **[FlashVision](https://github.com/FlashVision)** — Creator & Lead Developer
 
 ---
 
-*This project is maintained solely by Gaurav14cs17.*
+*This project is maintained solely by FlashVision.*
 
